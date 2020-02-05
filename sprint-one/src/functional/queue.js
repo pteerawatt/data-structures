@@ -17,11 +17,11 @@ var Queue = function() {
     var deleted = false;
     for (key in storage) {
       if (!deleted) {
-      deletedItem = storage[key];
-      delete storage[key];
-      deleted = true;
+        deletedItem = storage[key];
+        delete storage[key];
+        deleted = true;
       }
-      }
+    }
     return deletedItem;
   };
 
