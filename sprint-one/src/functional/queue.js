@@ -14,10 +14,14 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     var deletedItem = 'item';
+    var deleted = false;
     for (key in storage) {
+      if (!deleted) {
       deletedItem = storage[key];
-      delete storage[0];
-    }
+      delete storage[key];
+      deleted = true;
+      }
+      }
     return deletedItem;
   };
 
